@@ -1,0 +1,8 @@
+ErrorDocument 404 /errors/error404.php
+ErrorDocument 401 /errors/error401.php
+ErrorDocument 403 /errors/error403.php
+RewriteEngine on
+RewriteRule ^steps/([A-Za-z0-9-]+)/?$ index.php?what=reserve&step=$1 [NC]
+RewriteRule ^report/([A-Za-z0-9-]+)/?$ pdf.php?type=$1 [NC]
+RewriteRule ^admin/([A-Za-z0-9-]+)/?$ index.php?what=admin&page=$1 [NC]
+RewriteRule ^pages/([A-Za-z0-9-]+)/?$ index.php?what=page&page=$1 [NC]
