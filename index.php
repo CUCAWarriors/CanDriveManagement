@@ -38,9 +38,9 @@ else {
 			
 			<center>
 		<table border><tr><td>
-           <a  href="/reports">Reports</a></td><td>
+           <a  href="/page/reports">Reports</a></td><td>
 		   
-		   <a  href="/checkin">CheckIn</a></td>
+		   <a  href="/page/checkin">CheckIn</a></td>
 		   </tr>
 		   </table>
 		   </center>

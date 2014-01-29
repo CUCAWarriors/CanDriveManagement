@@ -26,7 +26,7 @@ $site_name= 'EDIT ME'
 
 $db = new mysqli($db_host, $db_user, $db_pass, $db_database);
 
-if($db->connect_errno > 0){
+if($db->connect_error > 0){
     die('Unable to connect to database [' . $db->connect_error . ']');
 }
 

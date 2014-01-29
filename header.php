@@ -123,7 +123,7 @@ if(isset($_SESSION['msg']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo '$site_name' ?></title>
     
-    <link rel="stylesheet" type="text/css" href="/demo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/site.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/login_panel/css/slide.css" media="screen" />
     
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
@@ -147,11 +147,11 @@ if(isset($_SESSION['msg']))
 		<div class="content clearfix">
 			<div class="left">
 			<?if (!isset($_SESSION['usr'])) {?>
-				<h1>Charlotte United Christian Academy IT Asset Reservation System</h1>
+				<h1><?=$site_name ?></h1>
 				<h2>How To Use:</h2>		
-				<p class="grey">Use the system to reserve IT Assets (iPads, Laptops etc.) for use in your classroom</p>
+				<p class="grey">Use the system to manage the can drive</p>
 				<h2>Help?</h2>
-				<p class="grey">Please see the Technology Coordinator or Network Administrator in the office<br></p>
+				<p class="grey">Please see the IT administrator<br></p>
 				<?}?>
 			</div>
             
@@ -197,7 +197,7 @@ if(isset($_SESSION['msg']))
             
             <h1><?php echo '$site_name' ?></h1>
 			<h2>
-           <a  href="/reports">Reports</a> | <a  href="/checkin">Checkin</a>
+           <a  href="/page/reports">Reports</a> | <a  href="/page/checkin">Checkin</a>
             </h2>
             </div>
             
