@@ -8,7 +8,7 @@ include 'header.php';
 <div class="pageContent">
     <div id="main">
       <div class="container">
-        <h1>Charlotte United Asset Reservation System</h1>
+        <h1></h1>
         </div>
         
         
@@ -38,10 +38,9 @@ else {
 			
 			<center>
 		<table border><tr><td>
-           <a  href="/steps/one">RESERVE ASSETS</a></td><td>
+           <a  href="/reports">Reports</a></td><td>
 		   
-		   <a  href="/pages/lookup">LOOKUP TRANSACTION</a></td><td>
-		   <a href="/?logoff">LOG OFF</a></td>
+		   <a  href="/checkin">CheckIn</a></td>
 		   </tr>
 		   </table>
 		   </center>
@@ -59,7 +58,7 @@ END;
 }
 }
 else {
-?> <p>Welcome to the Asset Reservation System! You are not logged in, please login now using the panel above!</p>
+?> <p>Welcome to the Can Management System please login using the above panel</p>
 
 <?}?>
         </div>

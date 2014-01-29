@@ -49,8 +49,7 @@ if($_POST['submit']=='Login')
 	
 	if(!count($err))
 	{
-		$_POST['username'] = mysql_real_escape_string($_POST['username']);
-		$_POST['password'] = mysql_real_escape_string($_POST['password']);
+		
 		$_POST['rememberMe'] = (int)$_POST['rememberMe'];
 		}
 		// Escaping all input data
@@ -122,7 +121,7 @@ if(isset($_SESSION['msg']))
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Charlotte United Chrsitain Academy IT Asset Reservation System</title>
+<title><?php echo '$site_name' ?></title>
     
     <link rel="stylesheet" type="text/css" href="/demo.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/login_panel/css/slide.css" media="screen" />
@@ -196,9 +195,9 @@ if(isset($_SESSION['msg']))
             
             <div class="left">
             
-            <h1>Charlotte United IT Asset Reservation System</h1>
+            <h1><?php echo '$site_name' ?></h1>
 			<h2>
-           <a  href="/steps/one">Reserve Assets</a> | <a  href="/lookup">Lookup Transaction</a> <?if (isset($_SESSION['admin'])) { echo '| <a href="/admin/home">Administration Panel</a>'; } ?>| <a href="/?logoff">Log off</a>
+           <a  href="/reports">Reports</a> | <a  href="/checkin">Checkin</a>
             </h2>
             </div>
             
