@@ -81,3 +81,11 @@ a:hover{
 	text-align:center;
 	padding:10px;
 }
+
+p label {
+    display: inline-block;
+    width: x;
+}
+p input {
+    width: y;
+}

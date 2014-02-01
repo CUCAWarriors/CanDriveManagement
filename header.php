@@ -62,8 +62,8 @@ $authUser = $adldap->authenticate($_POST['username'], $_POST['password']);
 //Check whether the query was successful or nots
 	if($authUser) {
 	
-$ingroup=$adldap->user()->ingroup($_POST['username'] ,"ReservationUsers");
-$inadmin=$adldap->user()->ingroup($_POST['username'] ,"ReservationAdmin");
+$ingroup=$adldap->user()->ingroup($_POST['username'] ,$LDAPuserGroup);
+$inadmin=$adldap->user()->ingroup($_POST['username'] ,$LDAPadminGroup);
 		
 
 		if($ingroup)
@@ -121,7 +121,7 @@ if(isset($_SESSION['msg']))
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo '$site_name' ?></title>
+<title><?php echo $site_name ?></title>
     
     <link rel="stylesheet" type="text/css" href="/site.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/login_panel/css/slide.css" media="screen" />
@@ -195,7 +195,7 @@ if(isset($_SESSION['msg']))
             
             <div class="left">
             
-            <h1><?php echo '$site_name' ?></h1>
+            <h1><?php echo $site_name ?></h1>
 			<h2>
            <a  href="/page/reports">Reports</a> | <a  href="/page/checkin">Checkin</a>
             </h2>

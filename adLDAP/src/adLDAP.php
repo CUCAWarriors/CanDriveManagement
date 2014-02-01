@@ -74,18 +74,18 @@ class adLDAP {
     /**
     * The default port for LDAP non-SSL connections
     */
-    const ADLDAP_LDAP_PORT = $ldapPort;
+    const ADLDAP_LDAP_PORT = '389';
     /**
     * The default port for LDAPS SSL connections
     */
-    const ADLDAP_LDAPS_PORT = $ldapsPort;
+    const ADLDAP_LDAPS_PORT = '636';
     
     /**
     * The account suffix for your domain, can be set when the class is invoked
     * 
     * @var string
     */   
-	protected $accountSuffix = $userAccountSuffix;
+	protected $accountSuffix = '@EXAMPLE.COM'; //editme
     
     /**
     * The base dn for your domain
@@ -94,7 +94,7 @@ class adLDAP {
     * 
     * @var string
     */
-	protected $baseDn = $userBaseDn; 
+	protected $baseDn = 'DC=DOMAIN, DC=EXAMPLE, DC=COM'; //editme your base dn for authenticiation, this can also drill down to OUs 
     
     /** 
     * Port used to talk to the domain controllers. 
@@ -109,7 +109,7 @@ class adLDAP {
     * 
     * @var array
     */
-    protected $domainControllers = $ldapServers;
+    protected $domainControllers = Array('DC.domain.example.com'); //editme the address of your domain controller, you can add more in the form on an array
 	
     /**
     * Optional account with higher privileges for searching
@@ -118,8 +118,8 @@ class adLDAP {
     * @var string
     * @var string
     */
-	protected $adminUsername = $domainAdminUser
-    protected $adminPassword = $domaninAdminPassword;
+	protected $adminUsername = 'Administrator'; //editme the username of the account you want to use to bind to the domain, I recomened that this is the Domain Admin
+    protected $adminPassword = 'PASSWORD'; //editme the password of the previous account
     
     /**
     * AD does not return the primary group. http://support.microsoft.com/?kbid=321360
